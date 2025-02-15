@@ -51,17 +51,27 @@
             margin: 0 15px;
             font-size: 18px;
             font-weight: bold;
+            cursor: pointer;
         }
         nav a:hover {
             text-decoration: underline;
         }
+        .hidden {
+            display: none;
+        }
     </style>
+    <script>
+        function showSection(id) {
+            document.getElementById('bypass').classList.add('hidden');
+            document.getElementById('discord').classList.add('hidden');
+            document.getElementById(id).classList.remove('hidden');
+        }
+    </script>
 </head>
 <body>
     <nav>
-        <a href="#executores">Executores</a>
-        <a href="#bypass">Bypass</a>
-        <a href="#discord">Discord</a>
+        <a href="#" onclick="showSection('bypass')">Bypass</a>
+        <a href="#" onclick="showSection('discord')">Discord</a>
     </nav>
     <h1>Clh HUB Executores</h1>
     <div class="container">
@@ -71,12 +81,11 @@
         <a class="button" href="https://www.mediafire.com/file/3igryhzaok0fhjp/Codex+v2.658.460.apk/file" target="_blank">Baixar Codex</a>
         <a class="button" href="https://www.mediafire.com/file/zcmxvcoau3csjn5/Nebula%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Nebula</a>
     </div>
-    <div id="bypass" class="container" style="margin-top: 20px;">
+    <div id="bypass" class="container hidden" style="margin-top: 20px;">
         <a class="button" href="https://trigonkeyclh.vercel.app/" target="_blank">Trigon Bypass</a>
     </div>
-    <div id="discord" class="container" style="margin-top: 20px;">
+    <div id="discord" class="container hidden" style="margin-top: 20px;">
         <a class="button" href="https://discord.gg/Qxt5frHcfN" target="_blank">Entrar no Discord</a>
     </div>
 </body>
 </html>
-
