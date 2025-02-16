@@ -69,6 +69,9 @@
         function showSection(id) {
             document.getElementById('bypass').classList.add('hidden');
             document.getElementById('discord').classList.add('hidden');
+            document.getElementById('leitor').classList.add('hidden');
+            document.getElementById('api').classList.add('hidden');
+            document.getElementById('canal').classList.add('hidden');
             document.getElementById(id).classList.remove('hidden');
         }
     </script>
@@ -77,6 +80,9 @@
     <nav>
         <a href="#" onclick="showSection('bypass')">Bypass</a>
         <a href="#" onclick="showSection('discord')">Discord</a>
+        <a href="#" onclick="showSection('leitor')">Leitor de Arquivos</a>
+        <a href="#" onclick="showSection('api')">API</a>
+        <a href="#" onclick="showSection('canal')">Canal</a>
     </nav>
     <h1>Clh HUB Site</h1>
     <div class="container">
@@ -91,6 +97,15 @@
     </div>
     <div id="discord" class="container hidden" style="margin-top: 20px;">
         <a class="button" href="https://discord.gg/Qxt5frHcfN" target="_blank">Entrar no Discord</a>
+    </div>
+    <div id="leitor" class="container hidden" style="margin-top: 20px;">
+        <a class="button" href="https://leitor-de-arquivo.vercel.app/" target="_blank">Leitor de Arquivos</a>
+    </div>
+    <div id="api" class="container hidden" style="margin-top: 20px;">
+        <a class="button" href="https://apihtml.vercel.app/" target="_blank">API</a>
+    </div>
+    <div id="canal" class="container hidden" style="margin-top: 20px;">
+        <a class="button" href="https://www.youtube.com/@CLHHUBX" target="_blank">Canal</a>
     </div>
     <div class="footer">
         © 2025 Clh HUB. Todos os direitos reservados.
