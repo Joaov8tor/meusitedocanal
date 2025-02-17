@@ -65,15 +65,6 @@
             color: #ccc;
         }
     </style>
-    <script>
-        function showSection(id) {
-            document.getElementById('bypass').classList.add('hidden');
-            document.getElementById('discord').classList.add('hidden');
-            document.getElementById('leitor').classList.add('hidden');
-            document.getElementById('api').classList.add('hidden');
-            document.getElementById(id).classList.remove('hidden');
-        }
-    </script>
 </head>
 <body>
     <nav>
@@ -81,13 +72,14 @@
         <a href="#" onclick="showSection('discord')">Discord</a>
         <a href="#" onclick="showSection('leitor')">Leitor de Arquivos</a>
         <a href="#" onclick="showSection('api')">API</a>
+        <a href="#" onclick="showSection('canal')">Canal</a>
     </nav>
     <h1>Clh HUB Site</h1>
     <div class="container">
-        <a class="button" href="https://www.mediafire.com/file/8bosh56l8lsql61/Roblox_Arceus_X_NEO_1.5.4%2528CANAL_BIELSCRIPT%2529.apk/file" target="_blank">Baixar Arceus</a>
-        <a class="button" href="https://www.mediafire.com/file/jjsf47wgir01j4r/Delta-659%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Delta</a>
-        <a class="button" href="https://www.mediafire.com/file/316ryrx9manwtbb/Fluxus-659_%2528canal_BIELSCRIPT%2529.apk/file" target="_blank">Baixar Fluxus</a>
-        <a class="button" href="https://www.mediafire.com/file/3igryhzaok0fhjp/Codex+v2.658.460.apk/file" target="_blank">Baixar Codex</a>
+        <a class="button" href="https://www.mediafire.com/file/vogkl4zql1fr7r5/Roblox_Arceus_X_NEO_1.4.5.apk/file" target="_blank">Baixar Arceus</a>
+        <a class="button" href="https://www.mediafire.com/file/5gn1hx57qzx2yoy/Delta_2.647.716.apk/file" target="_blank">Baixar Delta</a>
+        <a class="button" href="https://www.mediafire.com/file/vgfu1rlp59xhp4f/Fluxus-659.apk/file" target="_blank">Baixar Fluxus</a>
+        <a class="button" href="https://www.mediafire.com/file/j6ebhveziwnyp8h/Codex_v2.658.460.apk/file" target="_blank">Baixar Codex</a>
         <a class="button" href="#" style="background: gray; cursor: not-allowed;">Nebula Não Funcionando</a>
     </div>
     <div id="bypass" class="container hidden" style="margin-top: 20px;">
@@ -102,8 +94,21 @@
     <div id="api" class="container hidden" style="margin-top: 20px;">
         <a class="button" href="https://apihtml.vercel.app/" target="_blank">API</a>
     </div>
+    <div id="canal" class="container hidden" style="margin-top: 20px;">
+        <a class="button" href="https://www.youtube.com/@CLHHUBX" target="_blank">Canal</a>
+    </div>
     <div class="footer">
         © 2025 Clh HUB. Todos os direitos reservados.
     </div>
+    <script>
+        function showSection(id) {
+            document.getElementById('bypass').classList.add('hidden');
+            document.getElementById('discord').classList.add('hidden');
+            document.getElementById('leitor').classList.add('hidden');
+            document.getElementById('api').classList.add('hidden');
+            document.getElementById('canal').classList.add('hidden');
+            document.getElementById(id).classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
