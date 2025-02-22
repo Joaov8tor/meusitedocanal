@@ -11,13 +11,13 @@
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
             padding: 50px;
-            animation: fadeIn 1.5s ease-in-out;
+            animation: fadeIn 2s ease-in-out;
         }
         h1 {
             margin-bottom: 20px;
             font-size: 2em;
             opacity: 0;
-            animation: fadeIn 1.5s ease-in-out 0.5s forwards;
+            animation: fadeInText 1.5s forwards 1s;
         }
         .container {
             background: rgba(0, 0, 0, 0.6);
@@ -25,7 +25,7 @@
             border-radius: 10px;
             display: inline-block;
             opacity: 0;
-            animation: fadeIn 1.5s ease-in-out 1s forwards;
+            animation: fadeInContainer 2s forwards 1s;
         }
         .button {
             display: block;
@@ -80,15 +80,28 @@
                 font-size: 14px;
             }
         }
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
             }
             to {
                 opacity: 1;
-                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInContainer {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
             }
         }
     </style>
@@ -108,6 +121,7 @@
         <a class="button" href="https://www.mediafire.com/file/4lbf6qsosbg4olo/FluxusV2.659%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Fluxus</a>
         <a class="button" href="https://www.mediafire.com/file/84d43m3qevykvm4/Codex_V2.660%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Codex</a>
         <a class="button" href="https://www.mediafire.com/file/zcmxvcoau3csjn5/Nebula%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Nebula</a>
+        <a class="button" href="https://www.mediafire.com/file/nary4juiqi2poy9/Hydrogen-v2.650.hydrogenexecutor.online.apk/file" target="_blank">Baixar Hydrogen</a>
     </div>
     <div id="bypass" class="container hidden" style="margin-top: 20px;">
         <a class="button" href="https://trigonkeyclh.vercel.app/" target="_blank">Trigon Bypass</a>
