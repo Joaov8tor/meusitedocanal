@@ -29,7 +29,6 @@
             display: inline-block;
             opacity: 0;
             animation: fadeIn 1s forwards 0.5s;
-            margin-top: 20px;
         }
         .button {
             display: block;
@@ -67,6 +66,9 @@
         nav a:hover {
             text-decoration: underline;
         }
+        .hidden {
+            display: none;
+        }
         .footer {
             margin-top: 50px;
             font-size: 14px;
@@ -76,9 +78,6 @@
         }
         .site-leve.mb {
             opacity: 0.9;
-        }
-        .hidden {
-            display: none;
         }
         @media screen and (max-width: 600px) {
             nav {
@@ -103,54 +102,51 @@
         <a href="#" onclick="showSection('site-leve')">Site Leve</a>
     </nav>
     <h1>Clh HUB Site New Update</h1>
-    <div class="container" id="main-container">
+    <div class="container">
         <a class="button" href="https://www.mediafire.com/file/8bosh56l8lsql61/Roblox_Arceus_X_NEO_1.5.4%2528CANAL_BIELSCRIPT%2529.apk/file" target="_blank">Baixar Arceus</a>
         <a class="button" href="https://www.mediafire.com/file/jjsf47wgir01j4r/Delta-659%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Delta</a>
         <a class="button" href="https://www.mediafire.com/file/4lbf6qsosbg4olo/FluxusV2.659%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Fluxus</a>
         <a class="button" href="https://www.mediafire.com/file/84d43m3qevykvm4/Codex_V2.660%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Codex</a>
         <a class="button" href="https://www.mediafire.com/file/zcmxvcoau3csjn5/Nebula%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Nebula</a>
     </div>
-    <div id="bypass" class="container hidden">
+    <div id="bypass" class="container hidden" style="margin-top: 20px;">
         <a class="button" href="https://trigonkeyclh.vercel.app/" target="_blank">Trigon Bypass</a>
-        <button class="button" onclick="backToMain()">Voltar</button>
+        <a class="button" href="#" onclick="goBack()">Voltar</a>
     </div>
-    <div id="discord" class="container hidden">
+    <div id="discord" class="container hidden" style="margin-top: 20px;">
         <a class="button" href="https://discord.gg/Qxt5frHcfN" target="_blank">Entrar no Discord</a>
-        <button class="button" onclick="backToMain()">Voltar</button>
+        <a class="button" href="#" onclick="goBack()">Voltar</a>
     </div>
-    <div id="leitor" class="container hidden">
+    <div id="leitor" class="container hidden" style="margin-top: 20px;">
         <a class="button" href="https://leitor-de-arquivo.vercel.app/" target="_blank">Leitor de Arquivos</a>
-        <button class="button" onclick="backToMain()">Voltar</button>
+        <a class="button" href="#" onclick="goBack()">Voltar</a>
     </div>
-    <div id="api" class="container hidden">
+    <div id="api" class="container hidden" style="margin-top: 20px;">
         <a class="button" href="https://apihtml.vercel.app/" target="_blank">API</a>
-        <button class="button" onclick="backToMain()">Voltar</button>
+        <a class="button" href="#" onclick="goBack()">Voltar</a>
     </div>
-    <div id="canal" class="container hidden">
+    <div id="canal" class="container hidden" style="margin-top: 20px;">
         <a class="button" href="https://www.youtube.com/@CLHHUBX" target="_blank">Canal</a>
-        <button class="button" onclick="backToMain()">Voltar</button>
+        <a class="button" href="#" onclick="goBack()">Voltar</a>
     </div>
-    <div id="site-leve" class="container hidden">
-        <a class="button" href="#">Em breve...</a>
-        <button class="button" onclick="backToMain()">Voltar</button>
+    <div id="site-leve" class="container hidden" style="margin-top: 20px;">
+        <a class="button" href="https://clhapp-leve.vercel.app/" target="_blank">Site Leve</a>
+        <a class="button" href="#" onclick="goBack()">Voltar</a>
     </div>
     <div class="footer">
         © 2025 Clh HUB. Todos os direitos reservados.
     </div>
     <script>
         function showSection(id) {
-            // Esconde todas as seções
             document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
-            // Exibe a seção desejada
             document.getElementById(id).classList.remove('hidden');
         }
 
-        function backToMain() {
-            // Esconde todas as seções
+        function goBack() {
             document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
-            // Exibe a página principal
-            document.getElementById('main-container').classList.remove('hidden');
+            document.querySelector('.container').classList.remove('hidden');
         }
     </script>
 </body>
 </html>
+
