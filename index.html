@@ -6,93 +6,115 @@
     <title>Clh HUB Site New Update</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, rgba(0, 21, 41, 1) 0%, rgba(23, 37, 78, 1) 100%);
+            color: #fff;
             text-align: center;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            padding: 50px;
-            opacity: 0;
-            animation: fadeIn 1s forwards;
+            overflow-x: hidden;
+            transition: background 0.3s ease;
         }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
         h1 {
-            margin-bottom: 20px;
-            font-size: 2em;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-top: 40px;
+            animation: fadeIn 1s forwards;
         }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 0;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            animation: fadeIn 1s forwards 0.2s;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #00f4ff;
+            text-decoration: underline;
+        }
+
         .container {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
             display: inline-block;
+            padding: 30px;
             opacity: 0;
             animation: fadeIn 1s forwards 0.5s;
+            transition: transform 0.3s ease-in-out;
         }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
         .button {
             display: block;
             width: 250px;
-            padding: 15px;
-            margin: 10px auto;
-            font-size: 18px;
-            color: white;
-            background: linear-gradient(90deg, #ff7e5f, #feb47b);
-            text-decoration: none;
-            border-radius: 8px;
+            padding: 20px;
+            margin: 15px auto;
+            font-size: 20px;
             font-weight: bold;
-            transition: 0.3s;
+            color: #fff;
+            background: linear-gradient(135deg, #00f4ff, #ff005d);
+            border-radius: 10px;
+            text-decoration: none;
+            transition: transform 0.3s, background 0.3s ease;
         }
+
         .button:hover {
-            background: linear-gradient(90deg, #feb47b, #ff7e5f);
-            transform: scale(1.05);
+            background: linear-gradient(135deg, #ff005d, #00f4ff);
+            transform: scale(1.1);
         }
-        nav {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            opacity: 0;
-            animation: fadeIn 1s forwards 0.2s;
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            font-size: 14px;
+            color: #888;
+            text-align: center;
+            animation: fadeIn 1s forwards 1s;
         }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
+
         .hidden {
             display: none;
         }
-        .footer {
-            margin-top: 50px;
-            font-size: 14px;
-            color: #ccc;
-            opacity: 0;
-            animation: fadeIn 1s forwards 1s;
-        }
-        .site-leve.mb {
-            opacity: 0.9;
-        }
-        @media screen and (max-width: 600px) {
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
             }
+
             nav a {
-                margin: 5px;
-                font-size: 14px;
+                font-size: 16px;
+                margin: 0 10px;
             }
         }
+
     </style>
 </head>
-<body class="site-leve mb">
+<body>
     <nav>
         <a href="#" onclick="showSection('bypass')">Bypass</a>
         <a href="#" onclick="showSection('discord')">Discord</a>
@@ -109,33 +131,36 @@
         <a class="button" href="https://www.mediafire.com/file/84d43m3qevykvm4/Codex_V2.660%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Codex</a>
         <a class="button" href="https://www.mediafire.com/file/zcmxvcoau3csjn5/Nebula%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Nebula</a>
     </div>
-    <div id="bypass" class="container hidden" style="margin-top: 20px;">
+
+    <div id="bypass" class="container hidden">
         <a class="button" href="https://trigonkeyclh.vercel.app/" target="_blank">Trigon Bypass</a>
         <a class="button" href="#" onclick="goBack()">Voltar</a>
     </div>
-    <div id="discord" class="container hidden" style="margin-top: 20px;">
+    <div id="discord" class="container hidden">
         <a class="button" href="https://discord.gg/Qxt5frHcfN" target="_blank">Entrar no Discord</a>
         <a class="button" href="#" onclick="goBack()">Voltar</a>
     </div>
-    <div id="leitor" class="container hidden" style="margin-top: 20px;">
+    <div id="leitor" class="container hidden">
         <a class="button" href="https://leitor-de-arquivo.vercel.app/" target="_blank">Leitor de Arquivos</a>
         <a class="button" href="#" onclick="goBack()">Voltar</a>
     </div>
-    <div id="api" class="container hidden" style="margin-top: 20px;">
+    <div id="api" class="container hidden">
         <a class="button" href="https://apihtml.vercel.app/" target="_blank">API</a>
         <a class="button" href="#" onclick="goBack()">Voltar</a>
     </div>
-    <div id="canal" class="container hidden" style="margin-top: 20px;">
+    <div id="canal" class="container hidden">
         <a class="button" href="https://www.youtube.com/@CLHHUBX" target="_blank">Canal</a>
         <a class="button" href="#" onclick="goBack()">Voltar</a>
     </div>
-    <div id="site-leve" class="container hidden" style="margin-top: 20px;">
+    <div id="site-leve" class="container hidden">
         <a class="button" href="https://clhapp-leve.vercel.app/" target="_blank">Site Leve</a>
         <a class="button" href="#" onclick="goBack()">Voltar</a>
     </div>
+
     <div class="footer">
         © 2025 Clh HUB. Todos os direitos reservados.
     </div>
+
     <script>
         function showSection(id) {
             document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
@@ -149,4 +174,3 @@
     </script>
 </body>
 </html>
-
