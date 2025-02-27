@@ -1,176 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clh HUB Site New Update</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: radial-gradient(circle, rgba(0, 21, 41, 1) 0%, rgba(23, 37, 78, 1) 100%);
-            color: #fff;
-            text-align: center;
-            overflow-x: hidden;
-            transition: background 0.3s ease;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site de Bypass - Futurista</title>
+  <style>
+    /* Estilos Globais */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background: #0e0e0e;
+      color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+    .container {
+      background: linear-gradient(135deg, #00dbde, #fc00ff);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
 
-        h1 {
-            font-size: 3rem;
-            font-weight: 600;
-            margin-top: 40px;
-            animation: fadeIn 1s forwards;
-        }
+    .container:hover {
+      transform: scale(1.05);
+    }
 
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 15px 0;
-            background: rgba(0, 0, 0, 0.5);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            z-index: 999;
-            animation: fadeIn 1s forwards 0.2s;
-        }
+    h1 {
+      color: #fff;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
-            font-weight: 500;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
+    input, button {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: 2px solid #00dbde;
+      border-radius: 8px;
+      background-color: #1e1e1e;
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+      transition: all 0.3s ease;
+    }
 
-        nav a:hover {
-            color: #00f4ff;
-            text-decoration: underline;
-        }
+    input:focus, button:focus {
+      border-color: #fc00ff;
+    }
 
-        .container {
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 15px;
-            display: inline-block;
-            padding: 30px;
-            opacity: 0;
-            animation: fadeIn 1s forwards 0.5s;
-            transition: transform 0.3s ease-in-out;
-        }
+    button {
+      background: #fc00ff;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
 
-        .container:hover {
-            transform: scale(1.05);
-        }
+    button:hover {
+      background: #00dbde;
+    }
 
-        .button {
-            display: block;
-            width: 250px;
-            padding: 20px;
-            margin: 15px auto;
-            font-size: 20px;
-            font-weight: bold;
-            color: #fff;
-            background: linear-gradient(135deg, #00f4ff, #ff005d);
-            border-radius: 10px;
-            text-decoration: none;
-            transition: transform 0.3s, background 0.3s ease;
-        }
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #333;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 1.2rem;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      border: 2px solid #00dbde;
+      display: none;
+    }
 
-        .button:hover {
-            background: linear-gradient(135deg, #ff005d, #00f4ff);
-            transform: scale(1.1);
-        }
+    .loading {
+      color: #fc00ff;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 10px;
+    }
 
-        .footer {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            font-size: 14px;
-            color: #888;
-            text-align: center;
-            animation: fadeIn 1s forwards 1s;
-        }
+    a {
+      color: #00dbde;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        .hidden {
-            display: none;
-        }
-
-        @media screen and (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            nav a {
-                font-size: 16px;
-                margin: 0 10px;
-            }
-        }
-
-    </style>
+    a:hover {
+      color: #fc00ff;
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <a href="#" onclick="showSection('bypass')">Bypass</a>
-        <a href="#" onclick="showSection('discord')">Discord</a>
-        <a href="#" onclick="showSection('leitor')">Leitor de Arquivos</a>
-        <a href="#" onclick="showSection('api')">API</a>
-        <a href="#" onclick="showSection('canal')">Canal</a>
-        <a href="#" onclick="showSection('site-leve')">Site Leve</a>
-    </nav>
-    <h1>Clh HUB Site New Update</h1>
-    <div class="container">
-        <a class="button" href="https://www.mediafire.com/file/8bosh56l8lsql61/Roblox_Arceus_X_NEO_1.5.4%2528CANAL_BIELSCRIPT%2529.apk/file" target="_blank">Baixar Arceus</a>
-        <a class="button" href="https://www.mediafire.com/file/jjsf47wgir01j4r/Delta-659%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Delta</a>
-        <a class="button" href="https://www.mediafire.com/file/4lbf6qsosbg4olo/FluxusV2.659%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Fluxus</a>
-        <a class="button" href="https://www.mediafire.com/file/84d43m3qevykvm4/Codex_V2.660%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Codex</a>
-        <a class="button" href="https://www.mediafire.com/file/zcmxvcoau3csjn5/Nebula%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Nebula</a>
-    </div>
 
-    <div id="bypass" class="container hidden">
-        <a class="button" href="https://trigonkeyclh.vercel.app/" target="_blank">Bypass</a>
-        <a class="button" href="#" onclick="goBack()">Voltar</a>
-    </div>
-    <div id="discord" class="container hidden">
-        <a class="button" href="https://discord.gg/Qxt5frHcfN" target="_blank">Entrar no Discord</a>
-        <a class="button" href="#" onclick="goBack()">Voltar</a>
-    </div>
-    <div id="leitor" class="container hidden">
-        <a class="button" href="https://leitor-de-arquivo.vercel.app/" target="_blank">Leitor de Arquivos</a>
-        <a class="button" href="#" onclick="goBack()">Voltar</a>
-    </div>
-    <div id="api" class="container hidden">
-        <a class="button" href="https://apihtml.vercel.app/" target="_blank">API</a>
-        <a class="button" href="#" onclick="goBack()">Voltar</a>
-    </div>
-    <div id="canal" class="container hidden">
-        <a class="button" href="https://www.youtube.com/@CLHHUBX" target="_blank">Canal</a>
-        <a class="button" href="#" onclick="goBack()">Voltar</a>
-    </div>
-    <div id="site-leve" class="container hidden">
-        <a class="button" href="https://clhapp-leve.vercel.app/" target="_blank">Site Leve</a>
-        <a class="button" href="#" onclick="goBack()">Voltar</a>
-    </div>
+  <div class="container">
+    <h1>Bypass Futurista</h1>
+    <input type="text" id="url" placeholder="Digite a URL para fazer o bypass" />
+    <button onclick="bypassUrl()">Fazer Bypass</button>
+    
+    <div class="loading" id="loading" style="display: none;">Aguarde...</div>
+    
+    <div class="result" id="result"></div>
+  </div>
 
-    <div class="footer">
-        © 2025 Clh HUB. Todos os direitos reservados.
-    </div>
+  <script>
+    async function bypassUrl() {
+      const url = document.getElementById('url').value;
+      const resultElement = document.getElementById('result');
+      const loadingElement = document.getElementById('loading');
+      
+      resultElement.style.display = "none";
+      loadingElement.style.display = "block";
 
-    <script>
-        function showSection(id) {
-            document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
-            document.getElementById(id).classList.remove('hidden');
+      try {
+        const response = await fetch(`https://api.solar-x.top/api/v3/bypass?url=${encodeURIComponent(url)}`);
+        const data = await response.json();
+
+        if (data && data.result) {
+          let resultText = data.result;
+
+          // Se o resultado for uma URL, transforma em link clicável
+          if (resultText.startsWith('http://') || resultText.startsWith('https://')) {
+            resultText = `Resultado: <a href="${resultText}" target="_blank">${resultText}</a>`;
+          }
+          
+          resultElement.innerHTML = resultText; // Atualiza o resultado
+          resultElement.style.display = "block";
+        } else {
+          resultElement.textContent = "Erro ao obter o resultado da API.";
+          resultElement.style.display = "block";
         }
+      } catch (error) {
+        resultElement.textContent = "Ocorreu um erro ao tentar fazer o bypass.";
+        resultElement.style.display = "block";
+      } finally {
+        loadingElement.style.display = "none";
+      }
+    }
+  </script>
 
-        function goBack() {
-            document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
-            document.querySelector('.container').classList.remove('hidden');
-        }
-    </script>
 </body>
 </html>
