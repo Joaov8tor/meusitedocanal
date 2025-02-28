@@ -22,7 +22,7 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 600;
             margin-top: 40px;
             animation: fadeIn 1s forwards;
@@ -32,21 +32,24 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 15px 0;
-            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.7);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             z-index: 999;
-            animation: fadeIn 1s forwards 0.2s;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 500;
             text-transform: uppercase;
             transition: color 0.3s ease;
+            padding: 8px 12px;
         }
 
         nav a:hover {
@@ -58,7 +61,7 @@
             background: rgba(0, 0, 0, 0.7);
             border-radius: 15px;
             display: inline-block;
-            padding: 30px;
+            padding: 20px;
             opacity: 0;
             animation: fadeIn 1s forwards 0.5s;
             transition: transform 0.3s ease-in-out;
@@ -70,14 +73,14 @@
 
         .button {
             display: block;
-            width: 250px;
-            padding: 20px;
-            margin: 15px auto;
-            font-size: 20px;
+            width: 200px;
+            padding: 15px;
+            margin: 10px auto;
+            font-size: 16px;
             font-weight: bold;
             color: #fff;
             background: linear-gradient(135deg, #00f4ff, #ff005d);
-            border-radius: 10px;
+            border-radius: 8px;
             text-decoration: none;
             transition: transform 0.3s, background 0.3s ease;
         }
@@ -88,13 +91,14 @@
         }
 
         .footer {
-            position: absolute;
-            bottom: 20px;
+            position: fixed;
+            bottom: 10px;
             width: 100%;
-            font-size: 14px;
-            color: #888;
+            font-size: 12px;
+            color: #bbb;
             text-align: center;
-            animation: fadeIn 1s forwards 1s;
+            padding: 5px 0;
+            background: rgba(0, 0, 0, 0.6);
         }
 
         .hidden {
@@ -107,54 +111,29 @@
             }
 
             nav a {
-                font-size: 16px;
-                margin: 0 10px;
+                font-size: 14px;
+                padding: 6px 10px;
             }
         }
-
     </style>
 </head>
 <body>
     <nav>
         <a href="#" onclick="showSection('bypass')">Bypass</a>
         <a href="#" onclick="showSection('discord')">Discord</a>
-        <a href="#" onclick="showSection('leitor')">Leitor de Arquivos</a>
+        <a href="#" onclick="showSection('leitor')">Leitor</a>
         <a href="#" onclick="showSection('api')">API</a>
         <a href="#" onclick="showSection('canal')">Canal</a>
         <a href="#" onclick="showSection('site-leve')">Site Leve</a>
     </nav>
     <h1>Clh HUB Site New Update</h1>
     <div class="container">
-        <a class="button" href="https://www.mediafire.com/file/8bosh56l8lsql61/Roblox_Arceus_X_NEO_1.5.4%2528CANAL_BIELSCRIPT%2529.apk/file" target="_blank">Baixar Arceus</a>
-        <a class="button" href="https://www.mediafire.com/file/jjsf47wgir01j4r/Delta-659%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Delta</a>
-        <a class="button" href="https://www.mediafire.com/file/4lbf6qsosbg4olo/FluxusV2.659%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Fluxus</a>
-        <a class="button" href="https://www.mediafire.com/file/84d43m3qevykvm4/Codex_V2.660%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Codex</a>
-        <a class="button" href="https://www.mediafire.com/file/zcmxvcoau3csjn5/Nebula%2528canal_BIEL_SCRIPT%2529.apk/file" target="_blank">Baixar Nebula</a>
-    </div>
-
-    <div id="bypass" class="container hidden">
-        <a class="button" href="https://trigonkeyclh.vercel.app/" target="_blank">Bypass</a>
-        <a class="button" href="#" onclick="goBack()">Voltar</a>
-    </div>
-    <div id="discord" class="container hidden">
-        <a class="button" href="https://discord.gg/Qxt5frHcfN" target="_blank">Entrar no Discord</a>
-        <a class="button" href="#" onclick="goBack()">Voltar</a>
-    </div>
-    <div id="leitor" class="container hidden">
-        <a class="button" href="https://leitor-de-arquivo.vercel.app/" target="_blank">Leitor de Arquivos</a>
-        <a class="button" href="#" onclick="goBack()">Voltar</a>
-    </div>
-    <div id="api" class="container hidden">
-        <a class="button" href="https://apihtml.vercel.app/" target="_blank">API</a>
-        <a class="button" href="#" onclick="goBack()">Voltar</a>
-    </div>
-    <div id="canal" class="container hidden">
-        <a class="button" href="https://www.youtube.com/@CLHHUBX" target="_blank">Canal</a>
-        <a class="button" href="#" onclick="goBack()">Voltar</a>
-    </div>
-    <div id="site-leve" class="container hidden">
-        <a class="button" href="https://clhapp-leve.vercel.app/" target="_blank">Site Leve</a>
-        <a class="button" href="#" onclick="goBack()">Voltar</a>
+        <a class="button" href="https://www.mediafire.com/file/enyhfikh65hy84w/Cryptic_2.661.713_%2528canal_BIELSCRIPT%2529.apk/file" target="_blank">Baixar Cryptic</a>
+        <a class="button" href="https://www.mediafire.com/file/b64jwcuxs27j0i7/Delta-660.647-02.apk/file" target="_blank">Baixar Delta</a>
+        <a class="button" href="https://www.mediafire.com/file/6y2v0auydgtvvwa/Fluxus_V2.661_%2528canal_BIELSCRIPT%2529.apk/file" target="_blank">Baixar Fluxus</a>
+        <a class="button" href="https://www.mediafire.com/file/rnotxlaocy0c52y/Nebula661_%2528canal_BIELSCRIPT%2529.apk/file" target="_blank">Baixar Nebula</a>
+        <a class="button" href="https://www.mediafire.com/file/g9jzdosexx4kflg/Roblox_Arceus_X_NEO_1.4.5.apk/file" target="_blank">Baixar Arceus</a>
+        <a class="button" href="https://www.mediafire.com/file/v01wurz2k2fltzh/Codex_v2.647.apk/file" target="_blank">Baixar Codex</a>
     </div>
 
     <div class="footer">
@@ -164,12 +143,10 @@
     <script>
         function showSection(id) {
             document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
-            document.getElementById(id).classList.remove('hidden');
-        }
-
-        function goBack() {
-            document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
-            document.querySelector('.container').classList.remove('hidden');
+            var section = document.getElementById(id);
+            if (section) {
+                section.classList.remove('hidden');
+            }
         }
     </script>
 </body>
