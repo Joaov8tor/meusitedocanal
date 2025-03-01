@@ -13,12 +13,11 @@
             color: #fff;
             text-align: center;
             overflow-x: hidden;
-            transition: background 0.3s ease;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
@@ -40,6 +39,7 @@
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
+            animation: fadeIn 1s forwards 0.3s;
         }
 
         nav a {
@@ -63,12 +63,7 @@
             display: inline-block;
             padding: 20px;
             opacity: 0;
-            animation: fadeIn 1s forwards 0.5s;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .container:hover {
-            transform: scale(1.05);
+            animation: fadeIn 1s forwards 0.6s;
         }
 
         .button {
@@ -82,12 +77,20 @@
             background: linear-gradient(135deg, #00f4ff, #ff005d);
             border-radius: 8px;
             text-decoration: none;
-            transition: transform 0.3s, background 0.3s ease;
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 1s forwards 0.9s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
+        /* Animação padrão de aumento e diminuição */
         .button:hover {
-            background: linear-gradient(135deg, #ff005d, #00f4ff);
-            transform: scale(1.1);
+            transform: scale(1.05); /* Aumenta o botão um pouco */
+        }
+
+        .button:active {
+            transform: scale(1); /* Retorna ao tamanho original ao clicar */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         .footer {
@@ -99,10 +102,6 @@
             text-align: center;
             padding: 5px 0;
             background: rgba(0, 0, 0, 0.6);
-        }
-
-        .hidden {
-            display: none;
         }
 
         @media screen and (max-width: 768px) {
@@ -119,17 +118,15 @@
 </head>
 <body>
     <nav>
+        <a href="https://discord.gg/A39uyTq3V3" target="_blank">Discord</a>
+        <a href="https://leitor-de-arquivo.vercel.app/" target="_blank">Leitor</a>
+        <a href="https://apihtml.vercel.app/" target="_blank">API</a>
+        <a href="https://clhapp-leve.vercel.app/" target="_blank">Site Leve</a>
         <a href="https://trigonkey.vercel.app/" target="_blank">Bypass</a>
-        <a href="#" onclick="showSection('discord')">Discord</a>
-        <a href="#" onclick="showSection('leitor')">Leitor</a>
-        <a href="#" onclick="showSection('api')">API</a>
-        <a href="#" onclick="showSection('canal')">Canal</a>
-        <a href="#" onclick="showSection('site-leve')">Site Leve</a>
+        <a href="https://www.youtube.com/@CLHHUBX" target="_blank">Canal</a>
     </nav>
     <h1>Clh HUB Site New Update</h1>
-
-    <!-- Seção de Botões -->
-    <div class="container" id="bypass">
+    <div class="container">
         <a class="button" href="https://www.mediafire.com/file/enyhfikh65hy84w/Cryptic_2.661.713_%2528canal_BIELSCRIPT%2529.apk/file" target="_blank">Baixar Cryptic</a>
         <a class="button" href="https://www.mediafire.com/file/b64jwcuxs27j0i7/Delta-660.647-02.apk/file" target="_blank">Baixar Delta</a>
         <a class="button" href="https://www.mediafire.com/file/6y2v0auydgtvvwa/Fluxus_V2.661_%2528canal_BIELSCRIPT%2529.apk/file" target="_blank">Baixar Fluxus</a>
@@ -138,24 +135,8 @@
         <a class="button" href="https://www.mediafire.com/file/v01wurz2k2fltzh/Codex_v2.647.apk/file" target="_blank">Baixar Codex</a>
     </div>
 
-    <!-- Seção Discord -->
-    <div class="container hidden" id="discord">
-        <a class="button" href="https://discord.gg/A39uyTq3V3" target="_blank">Entrar no Discord</a>
-        <a class="button" href="#" onclick="showSection('bypass')">Voltar</a>
-    </div>
-
     <div class="footer">
         © 2025 Clh HUB. Todos os direitos reservados.
     </div>
-
-    <script>
-        function showSection(id) {
-            document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
-            var section = document.getElementById(id);
-            if (section) {
-                section.classList.remove('hidden');
-            }
-        }
-    </script>
 </body>
 </html>
